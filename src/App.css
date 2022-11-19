@@ -1,5 +1,6 @@
 body{
   background-image: url("/background.png");
+  overflow: hidden;
 }
 
 .tinder{
@@ -16,6 +17,11 @@ body{
 
 .candidato button:last-child{
   margin-left: 1rem;
+}
+
+.dog{
+  overflow: auto;
+  max-height: 100vh;
 }
 
 .candidato button{

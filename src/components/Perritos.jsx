@@ -63,7 +63,7 @@ const Perritos = () => {
 
     console.log(rechazados);
 
-    const { data, refetch, status } = useQuery("perritos", conseguirPerritos);
+    const { data, refetch, isFetching, status } = useQuery("perritos", conseguirPerritos);
 
     return (
         <div className="tinder">
@@ -71,7 +71,7 @@ const Perritos = () => {
             <div className="candidato">
 
                 <h1>Candidatos</h1>
-                {status === "loading" ? <CircularProgress /> :
+                {status === "loading" || isFetching ? <CircularProgress /> :
 
                     (
                         <>
@@ -103,11 +103,11 @@ const Perritos = () => {
 
                 <h1>Rechazados</h1>
 
-                {rechazados.map((rechazado, index) => {
+                {rechazados.map((rechazados, index) => (
 
-                    <Rechazado index={index} perro={rechazado} funcion={OtraOportunidad} />
+                    <Rechazado key={index} perro={rechazados} funcion={OtraOportunidad}/>
 
-                })}
+                ))}
 
             </div>
 

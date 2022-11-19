@@ -11,7 +11,7 @@ const Aceptados = ({perro, funcion = null}) => {
 
   return (
     
-    <Card sx={{ maxWidth: 400, ml: 2, mt: 5}}>
+    <Card sx={{ maxWidth: 400}}>
 
     <CardActionArea>
 

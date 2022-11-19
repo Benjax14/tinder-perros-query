@@ -10,34 +10,34 @@ const Rechazados = ({perro, funcion = null}) => {
   const path = perro.message.split("/");
 
   return (
+    
+    <Card sx={{ maxWidth: 400}}>
 
-    <Card sx={{ maxWidth: 400, ml: 2, mt: 5 }}>
+    <CardActionArea>
 
-      <CardActionArea>
+      <CardMedia
+        component="img"
+        width="400"
+        height="300"
+        image={perro.message}
+        alt="perrito"
+      />
 
-        <CardMedia
-          component="img"
-          width="400"
-          height="300"
-          image={perro.message}
-          alt="perrito"
-        />
+      <CardContent>
+        <Typography gutterBottom variant="h3" component="div">
+          {path[4]}
+        </Typography>
+      </CardContent>
 
-        <CardContent>
-          <Typography gutterBottom variant="h3" component="div">
-            {path[4]}
-          </Typography>
-        </CardContent>
+    </CardActionArea>
 
-      </CardActionArea>
+    <CardActions>
+      <Button variant="outlined" color="error" onClick={() => funcion(perro)}>
+        Arrepentirse
+      </Button>
+    </CardActions>
 
-      <CardActions>
-        <Button variant="outlined" color="success" onClick={() => funcion(perro)}>
-          Otra oportunidad
-        </Button>
-      </CardActions>
-
-    </Card>
+  </Card>
 
   )
 }
