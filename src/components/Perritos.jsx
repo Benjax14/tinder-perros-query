@@ -62,6 +62,7 @@ const Perritos = () => {
 
     }
 
+
     const { data, refetch, isRefetching, status } = useQuery("perritos", conseguirPerritos);
 
     return (
@@ -76,11 +77,7 @@ const Perritos = () => {
 
                     (
                         <>
-                            <Candidato perro={data} />
-
-                            <br />
-                            <button onClick={() => Rechazados()}>Rechazar</button>
-                            <button onClick={() => Aceptados()}>Aceptar</button>
+                            <Candidato perro={data} funcion={Rechazados} funcion2={Aceptados}/>
                         </>
                     )
 

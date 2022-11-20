@@ -77,7 +77,5 @@ body{
 
 .candidato button:hover{
   background-color: #9AB5BC;
-  width: 6rem;
-  height: 2.5rem;
   color: black;
 }
