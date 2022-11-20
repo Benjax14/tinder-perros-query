@@ -63,7 +63,7 @@ const Perritos = () => {
 
     console.log(rechazados);
 
-    const { data, refetch, isFetching, status } = useQuery("perritos", conseguirPerritos);
+    const { data, refetch, isRefetching, status } = useQuery("perritos", conseguirPerritos);
 
     return (
         <div className="tinder">
@@ -71,7 +71,7 @@ const Perritos = () => {
             <div className="candidato">
 
                 <h1>Candidatos</h1>
-                {status === "loading" || isFetching ? <CircularProgress /> :
+                {status === "loading" || isRefetching ? <CircularProgress /> :
 
                     (
                         <>
