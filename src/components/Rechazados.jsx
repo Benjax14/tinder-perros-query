@@ -19,7 +19,7 @@ const Rechazados = ({perro, funcion = null}) => {
 
   return (
     
-    <Card sx={{ maxWidth: 400}}>
+    <Card sx={{ maxWidth: 400, mt: 1}}>
 
     <CardActionArea>
 
