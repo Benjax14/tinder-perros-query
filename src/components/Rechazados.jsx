@@ -3,7 +3,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import RotateLeftIcon from '@mui/icons-material/RotateLeft';
+import { Button, CardActionArea, CardActions ,IconButton} from '@mui/material';
 
 const Rechazados = ({perro, funcion = null}) => {
 
@@ -32,9 +33,9 @@ const Rechazados = ({perro, funcion = null}) => {
     </CardActionArea>
 
     <CardActions>
-      <Button variant="outlined" color="error" onClick={() => funcion(perro)}>
-        Arrepentirse
-      </Button>
+      <IconButton variant="outlined" onClick={() => funcion(perro)}>
+       <RotateLeftIcon/>
+      </IconButton>
     </CardActions>
 
   </Card>

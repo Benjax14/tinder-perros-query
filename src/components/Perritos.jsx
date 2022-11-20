@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query';
 import { CircularProgress } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import Candidato from './Candidato';
 import Rechazado from './Rechazados';
 import Aceptado from './Aceptados';
@@ -64,7 +65,9 @@ const Perritos = () => {
     const { data, refetch, isRefetching, status } = useQuery("perritos", conseguirPerritos);
 
     return (
+
         <div className="tinder">
+
 
             <div className="candidato">
 
@@ -87,14 +90,13 @@ const Perritos = () => {
 
             <div className="dog1">
 
-                <h1>Aceptados</h1>
+            <h1>Aceptados</h1>
 
                 {aceptados.map((aceptado, index) => (
 
                     <Aceptado key={index} perro={aceptado} funcion={Arrepentimiento} />
 
                 ))}
-
             </div>
 
             <div className="dog2">
@@ -108,7 +110,6 @@ const Perritos = () => {
                 ))}
 
             </div>
-
         </div>
     );
 }
