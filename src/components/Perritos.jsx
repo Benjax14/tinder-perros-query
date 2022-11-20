@@ -77,7 +77,7 @@ const Perritos = () => {
 
                     (
                         <>
-                            <Candidato perro={data} funcion={Rechazados} funcion2={Aceptados}/>
+                        <Candidato perro={data} funcion={Rechazados} funcion2={Aceptados}/>
                         </>
                     )
 
