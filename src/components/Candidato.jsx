@@ -11,7 +11,7 @@ const path = perro.message.split("/");
 
     return (
 
-        <Card variant="outlined" sx={{ maxWidth: 400, maxHeight: 600, ml: 2 }}>
+        <Card variant="outlined" sx={{ maxWidth: 400, maxHeight: 600}}>
                 <CardMedia
                     component="img"
                     width="400"

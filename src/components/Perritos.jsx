@@ -61,8 +61,6 @@ const Perritos = () => {
 
     }
 
-    console.log(rechazados);
-
     const { data, refetch, isRefetching, status } = useQuery("perritos", conseguirPerritos);
 
     return (
@@ -87,7 +85,7 @@ const Perritos = () => {
 
             </div>
 
-            <div className="dog">
+            <div className="dog1">
 
                 <h1>Aceptados</h1>
 
@@ -99,7 +97,7 @@ const Perritos = () => {
 
             </div>
 
-            <div className="dog">
+            <div className="dog2">
 
                 <h1>Rechazados</h1>
 
